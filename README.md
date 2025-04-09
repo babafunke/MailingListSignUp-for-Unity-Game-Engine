@@ -12,7 +12,6 @@ The Mailing List Signup Asset is a prefab for adding subscribers to a Mailer Lit
   - Create an empty Game object – your controller - and attach the SignUpScript.cs file to it. It is located in Assets/WafunkPublishing/MailingListSignUp/Scripts
   - Paste your MailerLite API Key into the ApiKeyInputField of the SignUpFormCanvas. Not to worry, it gets hidden when the app is run.
   - Select your controller and drag the NameInputField, EmailInputField, ApiKeyInputField, TermsButton, AlertPanel from the SignUpFormCanvas into the appropriate holders in the Inspector
-  - Select your controller and drag the checked and unchecked icons from Assets/WafunkPublishing/MailingListSignUp/Sprites into the 'Tick Image Sprites' in the Inspector
   - Select the 'SubmitButton' from the SignUpFormCanvas and set its click method to the 'SignUpScript.Register' function
   - Select the 'TermsAndConditionsButton' from the SignUpFormCanvas and set its click method to the 'SignUpScript.TermsChecked' function
   - You may also want to edit the TermsAndConditionsText text in the Inspector

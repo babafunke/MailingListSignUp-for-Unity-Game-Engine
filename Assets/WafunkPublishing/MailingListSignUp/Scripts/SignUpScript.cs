@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Text;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -18,9 +19,7 @@ namespace com.wafunkpublishing
         private Button termsButton;
         [SerializeField]
         private GameObject alertPanel;
-        [SerializeField]
-        private Sprite[] tickImageSprites = new Sprite[2];
-        private Image tickImage;
+        private GameObject checkboxImage, uncheckboxImage;
         private bool isChecked;
         private TMP_Text alertText;
         private readonly string BackendUrl = "https://api.mailerlite.com/api/v2/subscribers";
@@ -34,8 +33,12 @@ namespace com.wafunkpublishing
         private void Init()
         {
             inputApiKey.gameObject.SetActive(false);
-            tickImage = termsButton.transform.GetChild(1).GetComponent<Image>();
+            uncheckboxImage = termsButton.transform.GetChild(1).GameObject();
+            checkboxImage = termsButton.transform.GetChild(2).GameObject();
+            uncheckboxImage.SetActive(true);
+            checkboxImage.SetActive(false);
             alertText = alertPanel.transform.GetChild(0).GetComponent<TMP_Text>();
+            termsButton.GetComponentInChildren<TMP_Text>().color = new Color(1f, 1f, 1f, .5f);
             alertPanel.SetActive(false);
 
             if (ApiKeyCheck())
@@ -55,13 +58,15 @@ namespace com.wafunkpublishing
             {
                 isChecked = false;
                 termsButton.GetComponentInChildren<TMP_Text>().color = new Color(1f, 1f, 1f, .5f);
-                tickImage.sprite = tickImageSprites[0];
+                checkboxImage.SetActive(false);
+                uncheckboxImage.SetActive(true);
             }
             else if (!isChecked)
             {
                 isChecked = true;
                 termsButton.GetComponentInChildren<TMP_Text>().color = new Color(1f, 1f, 1f, 1f);
-                tickImage.sprite = tickImageSprites[1];
+                checkboxImage.SetActive(true);
+                uncheckboxImage.SetActive(false);
             }
         }
 

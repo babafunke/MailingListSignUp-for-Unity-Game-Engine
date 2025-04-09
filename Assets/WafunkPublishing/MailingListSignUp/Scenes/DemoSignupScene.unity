@@ -165,9 +165,6 @@ MonoBehaviour:
   menuScene: DemoMenuScene
   termsButton: {fileID: 1019489148}
   alertPanel: {fileID: 3330987037550409981}
-  tickImageSprites:
-  - {fileID: 1731627460955281841, guid: 242214e256fb1f74ea0944c0b231de37, type: 3}
-  - {fileID: -2968306877262672528, guid: 59345f72a5624c84fbcfe383223237f1, type: 3}
 --- !u!4 &543728882
 Transform:
   m_ObjectHideFlags: 0
@@ -363,7 +360,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 448911137507239971, guid: bd3a3f5ef60bbe144810c9066228d0c5, type: 3}
       propertyPath: m_text
-      value: "*****************************\u200B"
+      value: "**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\u200B"
       objectReference: {fileID: 0}
     - target: {fileID: 1328986209311236875, guid: bd3a3f5ef60bbe144810c9066228d0c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -395,7 +392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772095951425551296, guid: bd3a3f5ef60bbe144810c9066228d0c5, type: 3}
       propertyPath: m_Text
-      value: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMzIxOTVhZGViMzQwYjBiOWU0OGI2NGY0MTVjZTZhOWNmMmE1N2M5Y2FlNGI1Y2Q1YTI3MjdmZjkyMzM0MDE4NDU5Njk2ODNiMmVhMWYxZTIiLCJpYXQiOjE3NDM1MDg1NDAuNTE4ODY2LCJuYmYiOjE3NDM1MDg1NDAuNTE4ODcxLCJleHAiOjQ4OTkxODIxNDAuNTEzNDMsInN1YiI6IjYwNTQ1MSIsInNjb3BlcyI6W119.H57-7qXJHk-rrF0zqC4YS65grVRg-qRnQh5mOBkNO2vN46WDGaD__m12ajqAEUV8_nJ_WaoGLaytvU5s1s78QSQbHVxx8wP2bzSHpisXW00eBOGYOnphozUEufFVacfdFywOoMBAVgql2m7AKkhVt5zf3bDl_LU6Vsh45q0fP4LGoA8abC0GwlvW34TUoaQlcQGEAJMOAJIjp-9dnUmVr-eSonnkg0FoltdtXi8V8it5RBVVlq7n5eO9LvVQvKlXunS3N4C5lHFPY9p-ZUbccS8wNiCdIzHZAzlLV90CVJnuQ3tIhGB6ypnQA6HKZFxGhL4acXl9IIGRsrfo4v6lYJttTiaJA_3pEI2UCvnz828lINTEnAnusb5jqOKtnVBIclkFFNXv2z-457KI3WTlDHinL2q4ECoyHNKFhq1-GpL9RaN3Z50rTud6UxpgtKabIhFTHAR7omAC14Yv3FigQCR-ZhvYHrymxmd-Qo47_U9J-Cd2m1_xkn8Je7JY0Y618EiJLp4J7llQOnygs7wx91ExqcVYdjryXkvAhXJwND5RkJhxi0nYgkefKA9FOTG_rTw8TD-wgT9iZkaMQ3NmRNe4l0buEKvuOj5C-L8yP8YLpkUW9SQiz0QQDv3OJsxpEV82IpkqTbwK0A30TSwlQKEmSXImWcu0UgAoO3YLCGM\r"
+      value: ENTER YOUR MAILERLITE API KEY HERE
       objectReference: {fileID: 0}
     - target: {fileID: 2016345375254195232, guid: bd3a3f5ef60bbe144810c9066228d0c5, type: 3}
       propertyPath: m_Name
@@ -404,6 +401,10 @@ PrefabInstance:
     - target: {fileID: 2016345375254195232, guid: bd3a3f5ef60bbe144810c9066228d0c5, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671701642934477563, guid: bd3a3f5ef60bbe144810c9066228d0c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5280055231147765739, guid: bd3a3f5ef60bbe144810c9066228d0c5, type: 3}
       propertyPath: m_AnchoredPosition.x

@@ -3,6 +3,7 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace com.wafunkpublishing
@@ -11,6 +12,8 @@ namespace com.wafunkpublishing
     {
         [SerializeField]
         private TMP_InputField inputName, inputEmail, inputApiKey;
+        [SerializeField]
+        private string menuScene;
         [SerializeField]
         private Button termsButton;
         [SerializeField]
@@ -76,6 +79,16 @@ namespace com.wafunkpublishing
             }
         }
 
+        public void SkipRegistration()
+        {
+            if (string.IsNullOrEmpty(menuScene))
+            {
+                ShowPrompt("Fill in the name of the scene!");
+                return;
+            }
+            GoToMenuScene();
+        }
+
         IEnumerator RegisterUser(User user)
         {
             using (var request = UnityWebRequest.PostWwwForm(BackendUrl, "Post"))
@@ -103,6 +116,10 @@ namespace com.wafunkpublishing
                 else
                 {
                     ShowPrompt("Success!");
+                    if (!string.IsNullOrEmpty(menuScene))
+                    {
+                        Invoke(nameof(GoToMenuScene), 2f);
+                    }
                 }
             }
         }
@@ -149,6 +166,11 @@ namespace com.wafunkpublishing
             CancelInvoke(nameof(HidePrompt));
             alertText.text = string.Empty;
             alertPanel.SetActive(false);
+        }
+
+        private void GoToMenuScene()
+        {
+            SceneManager.LoadScene(menuScene);
         }
     }
 }

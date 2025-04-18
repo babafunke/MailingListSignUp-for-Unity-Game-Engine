@@ -1,4 +1,4 @@
-# MailingListSignUp
+# MailingListSignUp for Unity Game Engine
 This is a simple tool for integrating mailing list tools like MailerLite
 The Mailing List Signup Asset is a prefab for adding subscribers to a Mailer Lite mailing list. It is an integration with Mailer Lite’s API which makes audience building easy for Unity game developers.
 

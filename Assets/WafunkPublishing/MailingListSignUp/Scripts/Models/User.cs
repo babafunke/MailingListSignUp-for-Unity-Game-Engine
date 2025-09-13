@@ -6,13 +6,14 @@ namespace com.wafunkpublishing
     [Serializable]
     public class User
     {
-        public string name;
         public string email;
+        public ContactField fields;
+        public string[] groups;
+    }
 
-        public User(string name, string email)
-        {
-            this.name = name;
-            this.email = email;
-        }
+    [Serializable]
+    public class ContactField
+    {
+        public string name;
     }
 }

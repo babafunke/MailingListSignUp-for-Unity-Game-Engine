@@ -19,10 +19,12 @@ namespace com.wafunkpublishing
         private Button termsButton;
         [SerializeField]
         private GameObject alertPanel;
+        [SerializeField]
+        private string[] groupIdList;
         private GameObject checkboxImage, uncheckboxImage;
         private bool isChecked;
         private TMP_Text alertText;
-        private readonly string BackendUrl = "https://api.mailerlite.com/api/v2/subscribers";
+        private readonly string BackendUrl = "https://connect.mailerlite.com/api/subscribers";
         private readonly string MissingApiKeyError = "API Key is Missing!";
 
         public void Start()
@@ -79,7 +81,15 @@ namespace com.wafunkpublishing
 
             if (isValidForm)
             {
-                var user = new User(username, email);
+                var user = new User
+                {
+                    email = email,
+                    fields = new ContactField
+                    {
+                        name = username
+                    },
+                    groups = groupIdList
+                };
                 StartCoroutine(RegisterUser(user));
             }
         }
@@ -105,7 +115,7 @@ namespace com.wafunkpublishing
                 var token = inputApiKey.text.TrimEnd();
 
                 request.SetRequestHeader("content-type", "application/json");
-                request.SetRequestHeader("x-mailerlite-apikey", token);
+                request.SetRequestHeader("authorization", $"Bearer {token}");
                 request.uploadHandler = new UploadHandlerRaw(body);
                 yield return request.SendWebRequest();
 

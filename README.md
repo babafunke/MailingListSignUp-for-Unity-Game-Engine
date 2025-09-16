@@ -16,7 +16,7 @@ The Mailing List Signup Asset is a prefab for adding subscribers to a Mailer Lit
   - Paste your MailerLite API Key into the ApiKeyInputField of the SignUpFormCanvas. Not to worry, it gets hidden when the app is run.
   - Select your controller and drag the NameInputField, EmailInputField, ApiKeyInputField, TermsButton and AlertPanel from the SignUpFormCanvas into the appropriate holders in the Inspector View
   - If you have a Menu Scene or any other scene you'd like to navigate to after a user successfully registers or skips registration, enter its name in the 'Menu Scene' field in the Inspector View
-  - If you have Group you'd like your signups to be automatically added to then add the group ID(s) to the Group Id List field by clicking the '+' icons
+  - If you have any Group you'd like your signups to be automatically added to, then add the group ID(s) to the Group Id List field by clicking the '+' icons
   - Select the 'SkipButton' from the SignUpFormCanvas and set its click method to the 'SignUpScript.SkipRegistration' function
   - Select the 'SubmitButton' from the SignUpFormCanvas and set its click method to the 'SignUpScript.Register' function
   - Select the 'TermsAndConditionsButton' from the SignUpFormCanvas and set its click method to the 'SignUpScript.TermsChecked' function
